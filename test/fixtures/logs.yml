@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  goodthing: MyString
+  idea: MyString
+  rethink: MyString
+  remember: MyString
+  motibation: 1
+
+two:
+  goodthing: MyString
+  idea: MyString
+  rethink: MyString
+  remember: MyString
+  motibation: 1

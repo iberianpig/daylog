@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Goodthing:</strong>
+  <%= @log.goodthing %>
+</p>
+
+<p>
+  <strong>Idea:</strong>
+  <%= @log.idea %>
+</p>
+
+<p>
+  <strong>Rethink:</strong>
+  <%= @log.rethink %>
+</p>
+
+<p>
+  <strong>Remember:</strong>
+  <%= @log.remember %>
+</p>
+
+<p>
+  <strong>Motibation:</strong>
+  <%= @log.motibation %>
+</p>
+
+<%= link_to 'Edit', edit_log_path(@log) %> |
+<%= link_to 'Back', logs_path %>

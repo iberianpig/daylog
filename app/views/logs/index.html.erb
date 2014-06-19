@@ -1,0 +1,35 @@
+<h1>Listing logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Goodthing</th>
+      <th>Idea</th>
+      <th>Rethink</th>
+      <th>Remember</th>
+      <th>Motibation</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logs.each do |log| %>
+      <tr>
+        <td><%= log.goodthing %></td>
+        <td><%= log.idea %></td>
+        <td><%= log.rethink %></td>
+        <td><%= log.remember %></td>
+        <td><%= log.motibation %></td>
+        <td><%= link_to 'Show', log %></td>
+        <td><%= link_to 'Edit', edit_log_path(log) %></td>
+        <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Log', new_log_path %>
