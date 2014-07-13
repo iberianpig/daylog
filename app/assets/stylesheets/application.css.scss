@@ -1,0 +1,32 @@
+//= require_self
+// require_tree .
+// require variables.scss
+
+
+//glyphicons'cdn
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+// @import "bootstrap";
+@import url("//netdna.bootstrapcdn.com/bootswatch/3.0.3/flatly/bootstrap.min.css");
+
+// Bootstrap body padding for fixed navbar
+body {
+  padding-top: 50px;
+  // padding-bottom: 50px;
+ }
+
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer {
+  background-color:lightgrey;
+  box-shadow: 0px 1px 1px 0px darkgray inset;
+}
+
+#footer > .container {
+  padding-top: 30px;
+  padding-left: 15;
+  padding-right: 15px;
+  padding-bottom: 30px;
+}
+
