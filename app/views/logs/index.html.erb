@@ -1,14 +1,14 @@
 <h1>Listing logs</h1>
 
-<table>
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
-      <th>Goodthing</th>
+      <th>Log day</th>
+      <th>Positive thing</th>
       <th>Idea</th>
-      <th>Rethink</th>
+      <th>Thought again</th>
       <th>Remember</th>
       <th>Motibation</th>
-      <th>Created at</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,12 +18,12 @@
   <tbody>
     <% @logs.each do |log| %>
       <tr>
-        <td><%= log.goodthing %></td>
+        <td><%= log.log_day %></td>
+        <td><%= log.positive_thing %></td>
         <td><%= log.idea %></td>
-        <td><%= log.rethink %></td>
+        <td><%= log.thought_again %></td>
         <td><%= log.remember %></td>
         <td><%= log.motibation %></td>
-        <td><%= log.created_at %></td>
         <td><%= link_to 'Show', log %></td>
         <td><%= link_to 'Edit', edit_log_path(log) %></td>
         <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>

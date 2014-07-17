@@ -1,2 +1,5 @@
 class Log < ActiveRecord::Base
+  validates :log_day, presence: true, uniqueness: true;
+  validates :motibation, presence: true, numericality: { only_integer: true, greater_than: 1, less_than: 5 };
+
 end

@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  goodthing: MyString
+  log_day: 2014-07-17 02:22:39
+  positive_thing: MyString
   idea: MyString
-  rethink: MyString
+  thought_again: MyString
   remember: MyString
   motibation: 1
 
 two:
-  goodthing: MyString
+  log_day: 2014-07-17 02:22:39
+  positive_thing: MyString
   idea: MyString
-  rethink: MyString
+  thought_again: MyString
   remember: MyString
   motibation: 1

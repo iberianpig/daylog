@@ -10,7 +10,12 @@ gem 'pg', group: [:production]
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
-gem 'bootswatch-rails'
+# gem 'bootswatch-rails'
+#
+gem 'simple_form', '~> 3.1.0.rc1'
+
+gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'git://github.com/zpaulovics/datetimepicker-rails.git'
+gem 'bootstrap-datetimepicker-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

@@ -69,6 +69,6 @@ class LogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def log_params
-      params.require(:log).permit(:goodthing, :idea, :rethink, :remember, :motibation)
+      params.require(:log).permit(:log_day, :positive_thing, :idea, :thought_again, :remember, :motibation)
     end
 end

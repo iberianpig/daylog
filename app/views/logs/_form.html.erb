@@ -1,37 +1,16 @@
-<%= form_for(@log) do |f| %>
-  <% if @log.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@log.errors.count, "error") %> prohibited this log from being saved:</h2>
+<%= simple_form_for(@log) do |f| %>
+  <%= f.error_notification %>
 
-      <ul>
-      <% @log.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class="form-inputs">
+    <%= f.input :log_day, as: :date  %>
+    <%= f.input :positive_thing, as: :text %>
+    <%= f.input :idea, as: :text %>
+    <%= f.input :thought_again, as: :text %>
+    <%= f.input :remember, as: :text %>
+    <%= f.input :motibation, as: :integer %>
+  </div>
 
-  <div class="field">
-    <%= f.label :goodthing %><br>
-    <%= f.text_field :goodthing %>
-  </div>
-  <div class="field">
-    <%= f.label :idea %><br>
-    <%= f.text_field :idea %>
-  </div>
-  <div class="field">
-    <%= f.label :rethink %><br>
-    <%= f.text_field :rethink %>
-  </div>
-  <div class="field">
-    <%= f.label :remember %><br>
-    <%= f.text_field :remember %>
-  </div>
-  <div class="field">
-    <%= f.label :motibation %><br>
-    <%= f.number_field :motibation %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.button :submit %>
   </div>
 <% end %>

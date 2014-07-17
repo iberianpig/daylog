@@ -1,12 +1,14 @@
+//*= require bootstrap-datetimepicker
 //= require_self
-// require_tree .
+//= require_tree .
 // require variables.scss
-
 
 //glyphicons'cdn
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
 // @import "bootstrap";
 @import url("//netdna.bootstrapcdn.com/bootswatch/3.0.3/flatly/bootstrap.min.css");
+
+@import 'bootstrap-datetimepicker';
 
 // Bootstrap body padding for fixed navbar
 body {
