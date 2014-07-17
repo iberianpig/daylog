@@ -6,7 +6,7 @@ one:
   idea: MyString
   thought_again: MyString
   remember: MyString
-  motibation: 1
+  motivation: 1
 
 two:
   log_day: 2014-07-17 02:22:39
@@ -14,4 +14,4 @@ two:
   idea: MyString
   thought_again: MyString
   remember: MyString
-  motibation: 1
+  motivation: 1

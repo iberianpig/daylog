@@ -18,7 +18,7 @@ class LogsControllerTest < ActionController::TestCase
 
   test "should create log" do
     assert_difference('Log.count') do
-      post :create, log: { idea: @log.idea, log_day: @log.log_day, motibation: @log.motibation, positive_thing: @log.positive_thing, remember: @log.remember, thought_again: @log.thought_again }
+      post :create, log: { idea: @log.idea, log_day: @log.log_day, motivation: @log.motivation, positive_thing: @log.positive_thing, remember: @log.remember, thought_again: @log.thought_again }
     end
 
     assert_redirected_to log_path(assigns(:log))
@@ -35,7 +35,7 @@ class LogsControllerTest < ActionController::TestCase
   end
 
   test "should update log" do
-    patch :update, id: @log, log: { idea: @log.idea, log_day: @log.log_day, motibation: @log.motibation, positive_thing: @log.positive_thing, remember: @log.remember, thought_again: @log.thought_again }
+    patch :update, id: @log, log: { idea: @log.idea, log_day: @log.log_day, motivation: @log.motivation, positive_thing: @log.positive_thing, remember: @log.remember, thought_again: @log.thought_again }
     assert_redirected_to log_path(assigns(:log))
   end
 

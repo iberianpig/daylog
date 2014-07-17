@@ -4,7 +4,7 @@ class LogsController < ApplicationController
   # GET /logs
   # GET /logs.json
   def index
-    @logs = Log.all
+    @logs = Log.all.order(:log_day).reverse_order
   end
 
   # GET /logs/1
@@ -69,6 +69,6 @@ class LogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def log_params
-      params.require(:log).permit(:log_day, :positive_thing, :idea, :thought_again, :remember, :motibation)
+      params.require(:log).permit(:log_day, :positive_thing, :idea, :thought_again, :remember, :motivation)
     end
 end
