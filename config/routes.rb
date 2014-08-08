@@ -2,6 +2,10 @@ Daylog::Application.routes.draw do
   resources :logs
   root 'logs#index'
 
+  # For OAuth
+  get 'auth/:provider/callback' => 'sessions#callback'
+  get '/logout'                 => 'sessions#destroy', :as => :logout
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140717051430) do
+ActiveRecord::Schema.define(version: 20140808035515) do
 
   create_table "logs", force: true do |t|
     t.date     "log_day"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20140717051430) do
     t.string   "thought_again"
     t.string   "remember"
     t.integer  "motivation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,6 +1,10 @@
 Daylog::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #For OmniAuth
+  provider :twitter, 'k4y2WEOI6Odc8YpkdIHzFZeL1', 'pCNvO6WY2BD7YYDaF2MtvUYOJwjXtlmBnpnjCdZQsb5uBZJ5gR'  
+  provider :facebook, 'k4y2WEOI6Odc8YpkdIHzFZeL1', 'pCNvO6WY2BD7YYDaF2MtvUYOJwjXtlmBnpnjCdZQsb5uBZJ5gR'  
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

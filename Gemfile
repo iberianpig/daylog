@@ -51,3 +51,11 @@ end
 
 #Use debugger
 gem 'debugger', group: [:development, :test]
+
+#Use Omniauth
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+# read environment variable from config/application.yml
+gem 'figaro'
