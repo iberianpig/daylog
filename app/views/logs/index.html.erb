@@ -1,21 +1,22 @@
 <h1>Listing logs</h1>
 
-<table class="table table-striped table-bordered">
-  <thead>
-    <tr>
-      <th>Log day</th>
-      <th>Positive thing</th>
-      <th>Idea</th>
-      <th>Thought again</th>
-      <th>Remember</th>
-      <th>Motivation</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<% if current_user %>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Log day</th>
+        <th>Positive thing</th>
+        <th>Idea</th>
+        <th>Thought again</th>
+        <th>Remember</th>
+        <th>Motivation</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @logs.each do |log| %>
       <tr>
         <td><%= log.log_day %></td>
@@ -29,9 +30,10 @@
         <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to 'New Log', new_log_path %>
+  <%= link_to 'New Log', new_log_path %>
+<% end %>

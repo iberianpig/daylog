@@ -1,10 +1,16 @@
 class LogsController < ApplicationController
+  before_action :set_user
+  before_action :require_authentication, except: :index
   before_action :set_log, only: [:show, :edit, :update, :destroy]
 
   # GET /logs
   # GET /logs.json
   def index
-    @logs = Log.all.order(:log_day).reverse_order
+    unless @user.nil?
+      if current_user == @user
+        @logs = Log.where(user_id: @user.id).order(:log_day).reverse_order
+      end
+    end
   end
 
   # GET /logs/1
@@ -24,7 +30,7 @@ class LogsController < ApplicationController
   # POST /logs
   # POST /logs.json
   def create
-    @log = Log.new(log_params)
+    @log = @user.logs.new(log_params)
 
     respond_to do |format|
       if @log.save
@@ -63,6 +69,10 @@ class LogsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_user
+      @user = current_user
+    end
+
     def set_log
       @log = Log.find(params[:id])
     end

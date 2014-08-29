@@ -1,6 +1,6 @@
 Daylog::Application.routes.draw do
   resources :logs
-  root 'logs#index'
+  root 'logs#index', :as => :root
 
   # For OAuth
   get 'auth/:provider/callback' => 'sessions#callback'
