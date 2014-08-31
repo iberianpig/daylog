@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     unless current_user
       respond_to do |format|
         format.html { redirect_to root_path, notice: "loginしてください" }
-        format.json { render json: loginしてください, status: :forbidden }
+        format.json { render json: "loginしてください", status: :forbidden }
       end
     end
   end
