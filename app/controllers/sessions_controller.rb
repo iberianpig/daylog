@@ -5,10 +5,12 @@ class SessionsController < ApplicationController
     auth = request.env["omniauth.auth"]
 
     #Userモデルを検索
-    user = User.find_by_provider_and_uid(auth["provider"], auth["uid"]) 
+    # user = User.find_by_provider_and_uid(auth["provider"], auth["uid"])
+    user = User.where(provider:auth["provider"], uid:auth["uid"]).first
+    # if auth["provider"]=="twitter"
 
     if user
-       # 既存のユーザ情報があった場合　ルートに遷移させます
+      # 既存のユーザ情報があった場合ルートに遷移させます
        session[:user_id] = user.id
        redirect_to root_url, :notice => "ログインしました。"
     else

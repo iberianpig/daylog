@@ -1,6 +1,8 @@
 <h1>Listing logs</h1>
 
 <% if current_user %>
+  <%= link_to 'New Log', new_log_path %>
+  <br>
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
@@ -33,7 +35,4 @@
     </tbody>
   </table>
 
-  <br>
-
-  <%= link_to 'New Log', new_log_path %>
 <% end %>
