@@ -1,9 +1,8 @@
 class MigrateUserWithUserId < ActiveRecord::Migration
   def up
-    #UserIdとDayLogsヒモ付を行う
-    #twitterのIdを利用
+    #twitterのId->facebookIdを利用
     Log.all.each do |log|
-      log.user_id=1
+      log.user_id=2
       log.save
     end
   end

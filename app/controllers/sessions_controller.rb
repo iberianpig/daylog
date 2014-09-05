@@ -21,7 +21,6 @@ class SessionsController < ApplicationController
     end
 
   end
-  aa
 
   def destroy
     session[:user_id] = nil
