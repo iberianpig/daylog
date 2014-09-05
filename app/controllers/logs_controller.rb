@@ -1,8 +1,10 @@
 class LogsController < ApplicationController
+  before_action :require_authentication, except: :home
   before_action :set_user
-  before_action :require_authentication, except: :index
   before_action :set_log, only: [:show, :edit, :update, :destroy]
 
+  def home 
+  end
   # GET /logs
   # GET /logs.json
   def index
@@ -70,7 +72,11 @@ class LogsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = current_user
+      if current_user
+        @user = current_user
+      elsif mobile_user
+        @user = mobile_user
+      end
     end
 
     def set_log

@@ -1,10 +1,15 @@
 Daylog::Application.routes.draw do
   resources :logs
-  root 'logs#index', :as => :root
+  root 'logs#home', :as => :root
 
   # For OAuth
   get 'auth/:provider/callback' => 'sessions#callback'
   get '/logout'                 => 'sessions#destroy', :as => :logout
+
+  # For MobileApp
+  # http://HOSTNAME/check_mobile_login
+  # body: token=FB_MOBILE_TOKEN
+  post '/check_mobile_login'     => 'session#check_mobile_login'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

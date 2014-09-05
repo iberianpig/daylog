@@ -56,6 +56,7 @@ gem 'debugger', group: [:development, :test]
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'fb_graph'
 
 # read environment variable from config/application.yml
 gem 'figaro'
