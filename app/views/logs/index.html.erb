@@ -1,5 +1,4 @@
 <% if current_user %>
-  <br>
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
@@ -14,19 +13,19 @@
     </thead>
 
     <tbody>
-    <% @logs.each do |log| %>
-      <tr>
-        <td><%= log.log_day %></td>
-        <td><%= log.positive_thing %></td>
-        <td><%= log.idea %></td>
-        <td><%= log.thought_again %></td>
-        <td><%= log.remember %></td>
-        <td><%= log.motivation %></td>
-        <td><%= link_to 'Show', log %><br>
-          <%= link_to 'Edit', edit_log_path(log) %><br>
-          <%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+      <% @logs.each do |log| %>
+        <tr>
+          <td style="white-space:nowrap;"><%= log.log_day %></td>
+          <td style="word-break: break-word;"><%= log.positive_thing %></td>
+          <td style="word-break: break-word;"><%= log.idea %></td>
+          <td style="word-break: break-word;"><%= log.thought_again %></td>
+          <td style="word-break: break-word;"><%= log.remember %></td>
+          <td><%= log.motivation %></td>
+          <td><%= link_to 'Show', log %><br>
+            <%= link_to 'Edit', edit_log_path(log) %><br>
+            <%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 
