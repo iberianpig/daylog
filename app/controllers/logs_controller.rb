@@ -3,6 +3,7 @@ class LogsController < ApplicationController
   before_action :set_user
   before_action :set_log, only: [:show, :edit, :update, :destroy]
 
+  # GET /
   def home 
   end
   # GET /logs
@@ -23,6 +24,15 @@ class LogsController < ApplicationController
   # GET /logs/new
   def new
     @log = Log.new
+  end
+  # GET /logs/today
+  def today
+    unless @log = Log.find_by_log_day(Date.today)
+      @log = Log.new
+      render action: 'new'
+    else
+      render action: 'edit'
+    end
   end
 
   # GET /logs/1/edit
