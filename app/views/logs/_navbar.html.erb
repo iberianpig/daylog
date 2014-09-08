@@ -1,0 +1,45 @@
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">DayLog</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Index</a></li>
+          <li> <%= link_to 'Create Log', new_log_path, :class => "" %> </li>
+          <li> <%= link_to 'Today Log', today_log_path, :class => "" %> </li>
+        </ul>
+        <!-- <form class="navbar&#45;form navbar&#45;left" role="search"> -->
+        <!--   <div class="form&#45;group"> -->
+        <!--     <input type="text" class="form&#45;control" placeholder="Search"> -->
+        <!--   </div> -->
+        <!--   <button type="submit" class="btn btn&#45;default">Submit</button> -->
+        <!-- </form> -->
+        <ul class="nav navbar-nav navbar-right" style="margin-right:40px;">
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= current_user ? "#{current_user.name}" : "Login" %> <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- <li><a href="#">Separated link</a></li> -->
+              <!-- <li class="divider"></li> -->
+              <% if current_user %>
+                <li><%= link_to "Logout" ,logout_path %></li>
+              <% else %>
+                <li> <%= link_to "TwitterでLogin","/auth/twitter" %> </li>
+                <li> <%= link_to "facebookでLogin", "/auth/facebook" %> </li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>

@@ -15,8 +15,8 @@ class ApplicationController < ActionController::Base
       return
     end
     respond_to do |format|
-      format.html { redirect_to root_path, notice: "loginしてください" }
-      format.json { render json: "loginしてください", status: :forbidden }
+      format.html { redirect_to root_path, notice: "ログインしてください" }
+      format.json { render json: "ログインしてください", status: :forbidden }
     end
   end
 
