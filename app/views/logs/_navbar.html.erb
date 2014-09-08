@@ -8,15 +8,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">DayLog</a>
+        <%= link_to "DayLog", logs_path, :class => "navbar-brand" %>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Index</a></li>
-          <li> <%= link_to 'Create Log', new_log_path, :class => "" %> </li>
-          <li> <%= link_to 'Today Log', today_log_path, :class => "" %> </li>
+          <li <%= "class = active" if current_page?(logs_path) %> > <%= link_to 'Index', logs_path%> </li>
+          <li <%= "class = active" if current_page?(new_log_path) %> > <%= link_to 'Create Log', new_log_path %> </li>
+          <li <%= "class = active" if current_page?(today_log_path) %> > <%= link_to 'Today Log', today_log_path %> </li>
         </ul>
         <!-- <form class="navbar&#45;form navbar&#45;left" role="search"> -->
         <!--   <div class="form&#45;group"> -->
