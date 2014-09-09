@@ -16,10 +16,10 @@
       <% @logs.each do |log| %>
         <tr>
           <td style="white-space:nowrap;"><%= log.log_day %></td>
-          <td style="word-break: break-word;"><%= log.positive_thing %></td>
-          <td style="word-break: break-word;"><%= log.idea %></td>
-          <td style="word-break: break-word;"><%= log.thought_again %></td>
-          <td style="word-break: break-word;"><%= log.remember %></td>
+          <td style="word-break: break-word;white-space: pre-line;"><%= log.positive_thing %></td>
+          <td style="word-break: break-word;white-space: pre-line;"><%= log.idea %></td>
+          <td style="word-break: break-word;white-space: pre-line;"><%= log.thought_again %></td>
+          <td style="word-break: break-word;white-space: pre-line;"><%= log.remember %></td>
           <td><%= log.motivation %></td>
           <td><%= link_to 'Show', log %><br>
             <%= link_to 'Edit', edit_log_path(log) %><br>
