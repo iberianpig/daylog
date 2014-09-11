@@ -6,18 +6,17 @@ Keep your motivation log, this is a sample apps for using rails4/restAPI/OAuth ,
 
 # You need create new App on Facebook before trying OAuth.
 
-0. require: heroku toolbelt and regist to heroku(check official heroku document)  
+0. Require: heroku toolbelt and regist to heroku(check official heroku document)  
 
-1. create a new app on https://developers.facebook.com/apps/ 
+1. Create a new app on https://developers.facebook.com/apps/ 
 
-2. regist Your herokuapp url on setting tab
+2. Get APP ID and APP SECRET on dashboard
 
-3. get APP ID and APP SECRET on dashboard
-
-4. type code below in your terminal
+3. Type code below in your terminal
   `heroku config:set FB_CONSUMER_KEY={ APP ID } --app { YOURAPPNAME }`
   `heroku config:set FB_CONSUMER_SECRET={ APP SECRET } --app { YOURAPPNAME }`
-4. hoge
+
+4. Access deployed your APP!
 
 
 # API
