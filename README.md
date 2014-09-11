@@ -4,7 +4,9 @@ Keep your motivation log, this is a sample apps for using rails4/restAPI/OAuth ,
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-# You need create new App on Facebook before trying OAuth.
+## You need to create new App on Facebook before trying Login with OAuth.
+
+# Deploy and Setting Daylog
 
 0. Require: heroku toolbelt and regist to heroku(check official heroku document)  
 
