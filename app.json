@@ -1,0 +1,7 @@
+{
+  "name": "DayLog Sample",
+  "description": "keep your motivation log, this is a sample apps for using rails4/restAPI/OAuth , you can access from android (https://github.com/iberianpig/daylog-android)" ,
+  "repository": "https://github.com/iberianpig/daylog",
+  "logo": "",
+  "keywords": ["rails4", "restAPI", "OAuth"]
+}
