@@ -6,7 +6,7 @@ class CreateLogs < ActiveRecord::Migration
       t.string :idea
       t.string :thought_again
       t.string :remember
-      t.integer :motibation
+      t.integer :motivation
 
       t.timestamps
     end
