@@ -27,7 +27,7 @@
         <ul class="nav navbar-nav navbar-right" style="margin-right:40px;">
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= current_user ? "#{current_user.name}" : "Login" %> <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= current_user ? "#{current_user.name}" : "Sign up/Login" %> <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <% if current_user %>
                 <li><%= link_to "Logout" ,logout_path %></li>
