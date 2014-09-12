@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
     #Userモデルを検索
     # user = User.find_by_provider_and_uid(auth["provider"], auth["uid"])
     user = User.where(provider: auth["provider"], uid: auth["uid"]).first
-    # if auth["provider"]=="twitter"
 
     if user
       # 既存のユーザ情報があった場合ルートに遷移させます

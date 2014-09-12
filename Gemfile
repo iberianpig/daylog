@@ -54,7 +54,6 @@ gem 'debugger', group: [:development, :test]
 
 #Use Omniauth
 gem 'omniauth'
-gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'fb_graph'
 

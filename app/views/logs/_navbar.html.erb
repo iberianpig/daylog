@@ -34,7 +34,6 @@
               <% if current_user %>
                 <li><%= link_to "Logout" ,logout_path %></li>
               <% else %>
-                <li> <%= link_to "TwitterでLogin","/auth/twitter" %> </li>
                 <li> <%= link_to "facebookでLogin", "/auth/facebook" %> </li>
               <% end %>
             </ul>
