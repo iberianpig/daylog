@@ -23,12 +23,12 @@ class LogsController < ApplicationController
 
   # GET /logs/new
   def new
-    @log = Log.new
+    @log = Log.new(log_day: Date.today, motivation: 1)
   end
   # GET /logs/today
   def today
     unless @log = Log.find_by_log_day(Date.today)
-      @log = Log.new
+      @log = Log.new(log_day: Date.today, motivation: 1)
       render action: 'new'
     else
       render action: 'edit'

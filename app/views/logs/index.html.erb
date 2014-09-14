@@ -4,11 +4,11 @@
     <thead>
       <tr>
         <th>Log day</th>
+        <th>Motivation</th>
         <th>Positive thing</th>
         <th>Idea</th>
         <th>Thought again</th>
         <th>Remember</th>
-        <th>Motivation</th>
         <th></th>
       </tr>
     </thead>
@@ -17,11 +17,11 @@
       <% @logs.each do |log| %>
         <tr>
           <td style="white-space:nowrap;"><%= log.log_day %></td>
+          <td><%= log.motivation %></td>
           <td style="word-break: break-word;white-space: pre-line;"><%= log.positive_thing %></td>
           <td style="word-break: break-word;white-space: pre-line;"><%= log.idea %></td>
           <td style="word-break: break-word;white-space: pre-line;"><%= log.thought_again %></td>
           <td style="word-break: break-word;white-space: pre-line;"><%= log.remember %></td>
-          <td><%= log.motivation %></td>
           <td><%= link_to 'Show', log %><br>
             <%= link_to 'Edit', edit_log_path(log) %><br>
             <%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
