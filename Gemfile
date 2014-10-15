@@ -57,5 +57,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'fb_graph'
 
+#SSL Cert
+gem 'certified'
+
 # read environment variable from config/application.yml
 gem 'figaro'
