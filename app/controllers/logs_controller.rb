@@ -27,8 +27,8 @@ class LogsController < ApplicationController
   end
   # GET /logs/today
   def today
-    unless @log = Log.find_by_log_day(Date.today)
-      @log = Log.new(log_day: Date.today, motivation: 1)
+    unless @log = @user.logs.where(log_day: Date.today).take
+      @log = @user.logs.build(log_day: Date.today)
       render action: 'new'
     else
       render action: 'edit'
