@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140829003434) do
+ActiveRecord::Schema.define(version: 20150301160903) do
 
   create_table "logs", force: true do |t|
     t.date     "log_day"
-    t.string   "positive_thing"
-    t.string   "idea"
-    t.string   "thought_again"
-    t.string   "remember"
+    t.text     "positive_thing"
+    t.text     "idea"
+    t.text     "thought_again"
+    t.text     "remember"
     t.integer  "motivation"
     t.datetime "created_at"
     t.datetime "updated_at"
